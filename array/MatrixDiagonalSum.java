@@ -8,7 +8,9 @@ class Solution {
             {
                 if(i==j || i+j==mat.length-1)
                 {
+                    
                     sum+=(mat[i][j]);
+                    
                 }
                 
             }
