@@ -13,6 +13,7 @@ class LL {
              next = null;
          }
      }
+     // *************************************insert*******************************************************************
      public static LL insert(LL li,int data)
      {
          Node new_node = new Node(data);
@@ -67,6 +68,38 @@ class LL {
          new_node.next = temp.next;
          temp.next = new_node;
          }
+         return li;
+     }
+        //********************* delte******************************************
+     
+      public static LL dele(LL li)
+     {
+         li.head = li.head.next;
+         return li;
+     }
+     public static LL delee(LL li)
+     { 
+         Node temp = li.head;
+         while(temp.next.next != null)
+         {
+           temp = temp.next;
+         }
+         temp.next = null;
+         return li;
+    }
+     public static LL delem(LL li,int pos)
+     {
+        
+             Node temp = li.head;
+             int i=0;
+         while(i < pos)
+         {
+             temp = temp.next;
+             i++;
+         }
+         temp.next = temp.next.next;
+         
+         
          return li;
      }
      
